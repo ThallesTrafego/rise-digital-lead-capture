@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface NavbarProps {
   scrollToContact: () => void;
@@ -7,6 +8,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ scrollToContact }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,31 +36,36 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToContact }) => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <div className="text-2xl font-montserrat font-bold">
-              <span className="text-rise-blue">Rise</span>
-              <span className="text-rise-orange">Digital</span>
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/b0c3886a-385b-4dc0-a724-4e75f051b08c.png" 
+                alt="Rise Digital Logo"
+                className={`transition-all duration-300 ${
+                  isMobile ? 'h-10' : (isScrolled ? 'h-12' : 'h-14')
+                }`}
+              />
             </div>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-rise-blue-light hover:text-rise-orange transition-colors">Home</a>
-            <a href="#" className="text-rise-blue-light hover:text-rise-orange transition-colors">Serviços</a>
-            <a href="#" className="text-rise-blue-light hover:text-rise-orange transition-colors">Portfolio</a>
-            <a href="#" className="text-rise-blue-light hover:text-rise-orange transition-colors">Sobre</a>
+            <a href="#" className="text-rise-blue-light hover:text-rise-blue-bright transition-colors">Home</a>
+            <a href="#" className="text-rise-blue-light hover:text-rise-blue-bright transition-colors">Serviços</a>
+            <a href="#" className="text-rise-blue-light hover:text-rise-blue-bright transition-colors">Portfolio</a>
+            <a href="#" className="text-rise-blue-light hover:text-rise-blue-bright transition-colors">Sobre</a>
           </div>
           
           <button 
             onClick={scrollToContact}
             className={`hidden md:block ${
               isScrolled 
-                ? 'bg-rise-orange hover:bg-rise-orange-light' 
-                : 'bg-white text-rise-orange hover:bg-gray-100'
+                ? 'bg-rise-blue-bright hover:bg-rise-blue-sky' 
+                : 'bg-white text-rise-blue-bright hover:bg-gray-100'
             } px-5 py-2 rounded-md text-white transition-all duration-300`}
           >
             Fale conosco
           </button>
           
-          <button className="md:hidden text-rise-blue">
+          <button className="md:hidden text-rise-blue-bright">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>

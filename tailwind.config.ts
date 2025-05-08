@@ -67,11 +67,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Rise Digital
+				// Cores atualizadas baseadas na logo da Rise Digital
 				rise: {
 					blue: {
-						DEFAULT: '#0f172a',
+						DEFAULT: '#0f172a', // Azul escuro (fundo da logo)
 						light: '#334155',
+						bright: '#33C3F0', // Cor do foguete da logo
+						sky: '#1EAEDB', // Tom mais escuro do azul do foguete
 					},
 					orange: {
 						DEFAULT: '#ff6b35',
