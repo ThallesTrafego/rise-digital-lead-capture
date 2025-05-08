@@ -5,6 +5,8 @@ import HeroSection from '@/components/HeroSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import TargetAudienceSection from '@/components/TargetAudienceSection';
+import ProjectsSection from '@/components/ProjectsSection';
 
 const Index = () => {
   const contactRef = useRef<HTMLDivElement>(null);
@@ -20,7 +22,11 @@ const Index = () => {
       <main>
         <HeroSection scrollToContact={scrollToContact} />
         <BenefitsSection />
-        <ContactSection ref={contactRef} id="contact" />
+        <TargetAudienceSection />
+        <ProjectsSection />
+        <div ref={contactRef} id="contact">
+          <ContactSection />
+        </div>
       </main>
       
       <Footer />
