@@ -7,6 +7,7 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import TargetAudienceSection from '@/components/TargetAudienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import EssentialPlanSection from '@/components/EssentialPlanSection';
 
 const Index = () => {
   const contactRef = useRef<HTMLDivElement>(null);
@@ -24,6 +25,7 @@ const Index = () => {
         <BenefitsSection />
         <TargetAudienceSection />
         <ProjectsSection />
+        <EssentialPlanSection />
         <div ref={contactRef} id="contact">
           <ContactSection />
         </div>
