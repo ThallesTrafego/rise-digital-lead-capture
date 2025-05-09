@@ -63,9 +63,9 @@ const Navbar: React.FC<NavbarProps> = () => {
             onClick={handleContactClick}
             className={`hidden md:block ${
               isScrolled 
-                ? 'bg-rise-blue-bright hover:bg-rise-blue-sky' 
+                ? 'bg-rise-blue-bright hover:bg-rise-blue-sky text-white' 
                 : 'bg-white text-rise-blue-bright hover:bg-gray-100'
-            } px-5 py-2 rounded-md text-white transition-all duration-300`}
+            } px-5 py-2 rounded-md transition-all duration-300`}
           >
             Fale conosco
           </button>
