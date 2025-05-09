@@ -15,11 +15,14 @@ const ProjectsSection = () => {
       id: 1,
       title: "Página para Arquiteta – estrutura pensada para conversão",
       image: "/placeholder.svg",
+      hasCarousel: false
     },
     {
       id: 2,
       title: "Página para Psicóloga – conversão direta via WhatsApp",
-      image: "/placeholder.svg",
+      description: "Landing page profissional desenvolvida para conversão direta via WhatsApp, com apresentação clara dos serviços e informações de contato.",
+      image: "/lovable-uploads/04aa3f48-4aa0-49e8-98e1-29744df1ca22.png",
+      hasCarousel: true
     }
   ];
 
@@ -59,56 +62,48 @@ const ProjectsSection = () => {
             {projects.map((project) => (
               <div key={project.id} className="flex flex-col">
                 <Card className="h-full border-none shadow-lg overflow-hidden">
-                  <div className="relative aspect-[16/9] bg-muted">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
+                  {project.hasCarousel ? (
+                    <div className="relative">
+                      <Carousel className="w-full">
+                        <CarouselContent>
+                          {psychologistImages.map((item) => (
+                            <CarouselItem key={item.id}>
+                              <div className="relative aspect-[16/9]">
+                                <img
+                                  src={item.image}
+                                  alt={item.alt}
+                                  className="object-cover w-full h-full"
+                                />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="left-2 h-8 w-8" />
+                        <CarouselNext className="right-2 h-8 w-8" />
+                      </Carousel>
+                    </div>
+                  ) : (
+                    <div className="relative aspect-[16/9] bg-muted">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                  )}
                   <CardContent className="p-6">
-                    <h3 className="text-lg font-medium text-rise-blue">
+                    <h3 className="text-lg font-medium text-rise-blue mb-2">
                       {project.title}
                     </h3>
+                    {project.description && (
+                      <p className="text-gray-600 text-sm">
+                        {project.description}
+                      </p>
+                    )}
                   </CardContent>
                 </Card>
               </div>
             ))}
-          </div>
-          
-          {/* Psychologist Project Carousel */}
-          <div className="mt-16">
-            <h3 className="text-2xl md:text-3xl font-montserrat font-bold mb-8 text-center text-rise-blue">
-              Site para Psicóloga - Natália Michelena
-            </h3>
-            <p className="text-gray-600 text-center mb-8">
-              Landing page profissional desenvolvida para conversão direta via WhatsApp, 
-              com apresentação clara dos serviços e informações de contato.
-            </p>
-            
-            <div className="relative px-12 mb-12">
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {psychologistImages.map((item) => (
-                    <CarouselItem key={item.id} className="md:basis-2/3 lg:basis-1/2">
-                      <div className="p-1">
-                        <Card className="border-none shadow-md overflow-hidden">
-                          <div className="relative aspect-[4/3]">
-                            <img
-                              src={item.image}
-                              alt={item.alt}
-                              className="object-cover w-full h-full"
-                            />
-                          </div>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="md:-left-4" />
-                <CarouselNext className="md:-right-4" />
-              </Carousel>
-            </div>
           </div>
 
           <div className="mt-12 text-center">
