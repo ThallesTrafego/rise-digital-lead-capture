@@ -3,7 +3,7 @@ import React from 'react';
 import { openWhatsAppChat } from '@/utils/whatsappUtils';
 
 interface HeroSectionProps {
-  scrollToContact: () => void; // Keeping the prop for compatibility
+  scrollToContact?: () => void; // Made optional by adding '?'
 }
 
 const HeroSection: React.FC<HeroSectionProps> = () => {

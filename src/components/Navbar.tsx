@@ -4,7 +4,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { openWhatsAppChat } from '@/utils/whatsappUtils';
 
 interface NavbarProps {
-  scrollToContact: () => void; // Keeping the prop for compatibility
+  scrollToContact?: () => void; // Made optional by adding '?'
 }
 
 const Navbar: React.FC<NavbarProps> = () => {
