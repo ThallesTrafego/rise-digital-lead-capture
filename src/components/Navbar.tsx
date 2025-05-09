@@ -1,12 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { openWhatsAppChat } from '@/utils/whatsappUtils';
 
 interface NavbarProps {
-  scrollToContact: () => void;
+  scrollToContact: () => void; // Keeping the prop for compatibility
 }
 
-const Navbar: React.FC<NavbarProps> = ({ scrollToContact }) => {
+const Navbar: React.FC<NavbarProps> = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
 
@@ -24,6 +25,10 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToContact }) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleContactClick = () => {
+    openWhatsAppChat("Olá! Gostaria de mais informações sobre os serviços da Rise Digital.");
+  };
 
   return (
     <header 
@@ -55,7 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToContact }) => {
           </div>
           
           <button 
-            onClick={scrollToContact}
+            onClick={handleContactClick}
             className={`hidden md:block ${
               isScrolled 
                 ? 'bg-rise-blue-bright hover:bg-rise-blue-sky' 

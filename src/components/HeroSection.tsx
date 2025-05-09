@@ -1,11 +1,16 @@
 
 import React from 'react';
+import { openWhatsAppChat } from '@/utils/whatsappUtils';
 
 interface HeroSectionProps {
-  scrollToContact: () => void;
+  scrollToContact: () => void; // Keeping the prop for compatibility
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ scrollToContact }) => {
+const HeroSection: React.FC<HeroSectionProps> = () => {
+  const handleContactClick = () => {
+    openWhatsAppChat("Olá! Estou interessado em ter uma Landing Page para minha empresa.");
+  };
+
   return (
     <section className="relative bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32 overflow-hidden">
       {/* Background elements */}
@@ -26,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToContact }) => {
           </p>
           
           <button 
-            onClick={scrollToContact} 
+            onClick={handleContactClick} 
             className="btn-primary animate-fade-in-up"
             style={{ animationDelay: '0.4s' }}
           >

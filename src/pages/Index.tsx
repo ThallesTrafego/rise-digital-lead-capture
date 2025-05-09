@@ -1,5 +1,5 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import BenefitsSection from '@/components/BenefitsSection';
@@ -10,25 +10,17 @@ import ProjectsSection from '@/components/ProjectsSection';
 import EssentialPlanSection from '@/components/EssentialPlanSection';
 
 const Index = () => {
-  const contactRef = useRef<HTMLDivElement>(null);
-
-  const scrollToContact = () => {
-    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div className="min-h-screen">
-      <Navbar scrollToContact={scrollToContact} />
+      <Navbar />
       
       <main>
-        <HeroSection scrollToContact={scrollToContact} />
+        <HeroSection />
         <BenefitsSection />
         <TargetAudienceSection />
         <ProjectsSection />
         <EssentialPlanSection />
-        <div ref={contactRef} id="contact">
-          <ContactSection />
-        </div>
+        <ContactSection />
       </main>
       
       <Footer />

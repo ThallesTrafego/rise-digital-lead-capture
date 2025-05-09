@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { openWhatsAppChat } from '@/utils/whatsappUtils';
 
 const EssentialPlanSection = () => {
   const features = [
@@ -13,10 +13,7 @@ const EssentialPlanSection = () => {
   ];
 
   const handleWhatsAppContact = () => {
-    // WhatsApp API URL with predefined message
-    const message = encodeURIComponent("Olá! Estou interessado no Plano Essencial para Landing Page.");
-    const whatsappUrl = `https://wa.me/55SEUNUMERODETELEFONE?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    openWhatsAppChat("Olá! Estou interessado no Plano Essencial para Landing Page.");
   };
 
   return (
