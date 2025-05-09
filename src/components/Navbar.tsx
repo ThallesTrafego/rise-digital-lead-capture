@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToContact }) => {
           <div className="flex items-center">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/b0c3886a-385b-4dc0-a724-4e75f051b08c.png" 
+                src="/lovable-uploads/78fca218-adda-45e6-adde-cf275178b074.png" 
                 alt="Rise Digital Logo"
                 className={`transition-all duration-300 ${
                   isMobile ? 'h-10' : (isScrolled ? 'h-12' : 'h-14')
