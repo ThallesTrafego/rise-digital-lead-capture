@@ -14,8 +14,9 @@ const ProjectsSection = () => {
     {
       id: 1,
       title: "Página para Arquiteta – estrutura pensada para conversão",
-      image: "/placeholder.svg",
-      hasCarousel: false
+      description: "Landing page profissional desenvolvida para arquitetos, com design moderno que destaca projetos e facilita o contato para potenciais clientes.",
+      image: "/lovable-uploads/78fca218-adda-45e6-adde-cf275178b074.png",
+      hasCarousel: true
     },
     {
       id: 2,
@@ -23,6 +24,20 @@ const ProjectsSection = () => {
       description: "Landing page profissional desenvolvida para conversão direta via WhatsApp, com apresentação clara dos serviços e informações de contato.",
       image: "/lovable-uploads/04aa3f48-4aa0-49e8-98e1-29744df1ca22.png",
       hasCarousel: true
+    }
+  ];
+
+  // Architect project images
+  const architectImages = [
+    {
+      id: 1,
+      image: "/lovable-uploads/78fca218-adda-45e6-adde-cf275178b074.png",
+      alt: "Header do site da arquiteta mostrando serviços oferecidos"
+    },
+    {
+      id: 2,
+      image: "/lovable-uploads/b0c3886a-385b-4dc0-a724-4e75f051b08c.png",
+      alt: "Seção de projetos do site da arquiteta"
     }
   ];
 
@@ -50,6 +65,18 @@ const ProjectsSection = () => {
     }
   ];
 
+  // Function to determine which images to use based on project id
+  const getProjectImages = (projectId) => {
+    switch(projectId) {
+      case 1:
+        return architectImages;
+      case 2:
+        return psychologistImages;
+      default:
+        return [];
+    }
+  };
+
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -66,7 +93,7 @@ const ProjectsSection = () => {
                     <div className="relative">
                       <Carousel className="w-full">
                         <CarouselContent>
-                          {psychologistImages.map((item) => (
+                          {getProjectImages(project.id).map((item) => (
                             <CarouselItem key={item.id}>
                               <div className="relative aspect-[16/9]">
                                 <img
