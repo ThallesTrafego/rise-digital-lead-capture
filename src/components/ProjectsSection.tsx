@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -66,22 +65,22 @@ const ProjectsSection = () => {
     }
   ];
 
-  // Psychologist project images
+  // Psychologist project images - reordered with the image of the psychologist as first
   const psychologistImages = [
     {
       id: 1,
+      image: "/lovable-uploads/783f40da-db79-48b7-9067-cc3aacfea0d2.png",
+      alt: "Seção sobre a psicóloga Natália Michelena"
+    },
+    {
+      id: 2,
       image: "/lovable-uploads/c1b3dd0c-460d-4bc7-b435-79626ccb00f8.png",
       alt: "Seção de contato da psicóloga com horários de atendimento"
     },
     {
-      id: 2,
+      id: 3,
       image: "/lovable-uploads/f5436ef9-1770-4253-bfb9-34aa0e542d00.png",
       alt: "Seção explicando para quem é o trabalho da psicóloga"
-    },
-    {
-      id: 3,
-      image: "/lovable-uploads/783f40da-db79-48b7-9067-cc3aacfea0d2.png",
-      alt: "Seção sobre a psicóloga Natália Michelena"
     },
     {
       id: 4,
