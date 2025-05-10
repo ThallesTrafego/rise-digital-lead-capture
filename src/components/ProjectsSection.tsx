@@ -15,7 +15,7 @@ const ProjectsSection = () => {
       id: 1,
       title: "Página para Arquiteta – estrutura pensada para conversão",
       description: "Landing page profissional desenvolvida para arquitetos, com design moderno que destaca projetos e facilita o contato para potenciais clientes.",
-      image: "/lovable-uploads/78fca218-adda-45e6-adde-cf275178b074.png",
+      image: "/lovable-uploads/a1bb82fc-eb22-4a9a-bef7-bf5b39ca5734.png",
       hasCarousel: true
     },
     {
@@ -27,17 +27,42 @@ const ProjectsSection = () => {
     }
   ];
 
-  // Architect project images
+  // Architect project images - updated with new images in the order provided
   const architectImages = [
     {
       id: 1,
-      image: "/lovable-uploads/78fca218-adda-45e6-adde-cf275178b074.png",
-      alt: "Header do site da arquiteta mostrando serviços oferecidos"
+      image: "/lovable-uploads/a1bb82fc-eb22-4a9a-bef7-bf5b39ca5734.png",
+      alt: "Header do site da arquiteta mostrando ambiente interior com design moderno"
     },
     {
       id: 2,
-      image: "/lovable-uploads/b0c3886a-385b-4dc0-a724-4e75f051b08c.png",
-      alt: "Seção de projetos do site da arquiteta"
+      image: "/lovable-uploads/76780a44-8307-460b-9435-91a97e5b6342.png",
+      alt: "Seção de depoimentos dos clientes da arquiteta"
+    },
+    {
+      id: 3,
+      image: "/lovable-uploads/faacc8c1-46f4-4a61-8d62-130a116f71ce.png",
+      alt: "Seção sobre transformação de ambientes com chamada para contato"
+    },
+    {
+      id: 4,
+      image: "/lovable-uploads/27dac09c-663a-4014-b433-52b327b74927.png",
+      alt: "Portfólio com projetos selecionados da arquiteta"
+    },
+    {
+      id: 5,
+      image: "/lovable-uploads/91fd0271-4bea-4476-89bc-56a2cde43af7.png",
+      alt: "Metodologia de trabalho da arquiteta em quatro etapas"
+    },
+    {
+      id: 6,
+      image: "/lovable-uploads/91409b03-3ad7-4bb0-9cc7-0ae8f8aeef67.png",
+      alt: "Serviços oferecidos pela arquiteta"
+    },
+    {
+      id: 7,
+      image: "/lovable-uploads/25e258dd-1ab8-4fac-a968-71015869a160.png",
+      alt: "Seção sobre a arquiteta Mariana Mello"
     }
   ];
 
