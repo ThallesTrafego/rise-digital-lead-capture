@@ -12,20 +12,25 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32 overflow-hidden">
-      {/* Background elements */}
+    <section className="relative py-20 lg:py-32 overflow-hidden">
+      {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-72 h-72 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+        <img 
+          src="/lovable-uploads/b9df69f6-4b32-4a08-bcba-ce348a9c4745.png" 
+          alt="Digital Marketing Background" 
+          className="absolute inset-0 w-full h-full object-cover blur-[3px]"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in-up heading-gradient">
+          <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in-up text-white">
             Transforme visitantes em clientes com um Site feito para converter
           </h1>
           
-          <p className="text-gray-600 text-lg md:text-xl mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-gray-100 text-lg md:text-xl mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Tenha uma página otimizada, rápida e focada em resultado para captar mais clientes no digital. 
             Desenvolvida pela Rise Digital, especialista em performance.
           </p>
@@ -38,7 +43,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             Quero minha Landing Page
           </button>
           
-          <div className="mt-12 grid grid-cols-3 gap-4 text-sm text-gray-500 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="mt-12 grid grid-cols-3 gap-4 text-sm text-gray-200 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="flex flex-col items-center">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-rise-orange mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
