@@ -31,7 +31,7 @@ const BenefitsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl heading-gradient mb-4 animate-fade-in-up">
-            Benefícios de uma Landing Page Profissional
+            Benefícios de um Site Profissional
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Invista em uma página otimizada especificamente para converter visitantes em leads qualificados

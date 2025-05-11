@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
@@ -6,14 +7,14 @@ import { openWhatsAppChat } from '@/utils/whatsappUtils';
 
 const EssentialPlanSection = () => {
   const features = [
-    '1 Landing Page responsiva',
+    '1 Site responsivo',
     'Copy persuasiva incluída',
     'Integração com WhatsApp ou formulário',
     'Prazo de entrega: até 7 dias úteis',
   ];
 
   const handleWhatsAppContact = () => {
-    openWhatsAppChat("Olá! Estou interessado no Plano Essencial para Landing Page.");
+    openWhatsAppChat("Olá! Estou interessado no Plano Essencial para Site.");
   };
 
   return (
