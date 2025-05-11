@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -13,14 +14,14 @@ const ProjectsSection = () => {
     {
       id: 1,
       title: "Página para Arquiteta – estrutura pensada para conversão",
-      description: "Landing page profissional desenvolvida para arquitetos, com design moderno que destaca projetos e facilita o contato para potenciais clientes.",
+      description: "Site profissional desenvolvido para arquitetos, com design moderno que destaca projetos e facilita o contato para potenciais clientes.",
       image: "/lovable-uploads/a1bb82fc-eb22-4a9a-bef7-bf5b39ca5734.png",
       hasCarousel: true
     },
     {
       id: 2,
       title: "Página para Psicóloga – conversão direta via WhatsApp",
-      description: "Landing page profissional desenvolvida para conversão direta via WhatsApp, com apresentação clara dos serviços e informações de contato.",
+      description: "Site profissional desenvolvido para conversão direta via WhatsApp, com apresentação clara dos serviços e informações de contato.",
       image: "/lovable-uploads/04aa3f48-4aa0-49e8-98e1-29744df1ca22.png",
       hasCarousel: true
     }
@@ -65,27 +66,27 @@ const ProjectsSection = () => {
     }
   ];
 
-  // Psychologist project images - reordered with the image of the psychologist as first
+  // Psychologist project images - reordered with the last image now as first
   const psychologistImages = [
     {
       id: 1,
+      image: "/lovable-uploads/04aa3f48-4aa0-49e8-98e1-29744df1ca22.png",
+      alt: "Header do site da psicóloga Natália Michelena"
+    },
+    {
+      id: 2,
       image: "/lovable-uploads/783f40da-db79-48b7-9067-cc3aacfea0d2.png",
       alt: "Seção sobre a psicóloga Natália Michelena"
     },
     {
-      id: 2,
+      id: 3,
       image: "/lovable-uploads/c1b3dd0c-460d-4bc7-b435-79626ccb00f8.png",
       alt: "Seção de contato da psicóloga com horários de atendimento"
     },
     {
-      id: 3,
+      id: 4,
       image: "/lovable-uploads/f5436ef9-1770-4253-bfb9-34aa0e542d00.png",
       alt: "Seção explicando para quem é o trabalho da psicóloga"
-    },
-    {
-      id: 4,
-      image: "/lovable-uploads/04aa3f48-4aa0-49e8-98e1-29744df1ca22.png",
-      alt: "Header do site da psicóloga Natália Michelena"
     }
   ];
 

@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = () => {
   const handleContactClick = () => {
-    openWhatsAppChat("Olá! Estou interessado em ter uma Landing Page para minha empresa.");
+    openWhatsAppChat("Olá! Estou interessado em ter um Site para minha empresa.");
   };
 
   return (
@@ -40,7 +40,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             className="btn-primary animate-fade-in-up"
             style={{ animationDelay: '0.4s' }}
           >
-            Quero minha Landing Page
+            Quero meu Site
           </button>
           
           <div className="mt-12 grid grid-cols-3 gap-4 text-sm text-gray-200 animate-fade-in" style={{ animationDelay: '0.6s' }}>
