@@ -52,6 +52,7 @@ const EssentialPlanSection = () => {
                 <div className="text-center">
                   <Button 
                     onClick={handleWhatsAppContact}
+                    data-gtm-id="btn-whatsapp-plano"
                     className="btn-primary w-full text-lg py-6"
                   >
                     Quero esse plano

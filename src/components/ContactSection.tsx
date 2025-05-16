@@ -31,6 +31,7 @@ const ContactSection: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ id, ..
               
               <Button 
                 onClick={handleContactClick}
+                data-gtm-id="btn-whatsapp-contato"
                 className="btn-primary text-lg py-6 px-10 w-full sm:w-auto"
               >
                 <MessageSquare className="mr-2" />

@@ -39,6 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             onClick={handleContactClick} 
             className="btn-primary animate-fade-in-up"
             style={{ animationDelay: '0.4s' }}
+            data-gtm-id="btn-whatsapp-hero"
           >
             Quero meu Site
           </button>

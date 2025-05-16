@@ -61,6 +61,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           
           <button 
             onClick={handleContactClick}
+            data-gtm-id="btn-whatsapp-nav"
             className={`hidden md:block ${
               isScrolled 
                 ? 'bg-rise-blue-bright hover:bg-rise-blue-sky text-white' 
